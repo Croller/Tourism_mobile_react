@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import {
   StyleSheet,
   FlatList,
@@ -14,7 +13,6 @@ import {
   ListItem,
 } from 'native-base';
 import { LogoV } from '../../assets/img';
-
 
 const routes = [
   {
@@ -57,7 +55,7 @@ class SideBar extends Component {
                   <Text style={styles.itemListText}>
                     {item.name}
                   </Text>
-                  <Icon name="chevron-right" color="#ffaf02" size={20} />
+                  {/* <ChevronRight color="#ffaf02" size={20} /> */}
                 </ListItem>
               )}
             />
