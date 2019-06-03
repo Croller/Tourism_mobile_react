@@ -20,4 +20,4 @@ react-native run-ios
 ### Screen
 
 #### Side Bar
-![alt text](https://dl.dropboxusercontent.com/s/gca28anlsfvmeps/Screenshot_1.png?dl=0 | width=250)
+![alt text](https://dl.dropboxusercontent.com/s/gca28anlsfvmeps/Screenshot_1.png?dl=0)
