@@ -11,6 +11,7 @@
   "author": "croller",
   "license": "ISC",
   "dependencies": {
+    "@mapbox/react-native-mapbox-gl": "https://github.com/nitaliano/react-native-mapbox-gl/tarball/master",
     "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.8",

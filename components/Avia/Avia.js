@@ -14,7 +14,9 @@ import {
   Content,
   Text,
   Card,
-  CardItem
+  CardItem,
+  Footer,
+  FooterTab
 } from 'native-base';
 // import IconAnt from 'react-native-vector-icons/AntDesign';
 
@@ -80,6 +82,22 @@ class Avia extends Component {
             <Text>Goto Profiles</Text>
           </Button>
         </Content>
+        <Footer>
+          <FooterTab>
+            <Button>
+              <Icon name="apps" />
+            </Button>
+            <Button>
+              <Icon name="camera" />
+            </Button>
+            <Button active>
+              <Icon active name="navigate" />
+            </Button>
+            <Button>
+              <Icon name="person" />
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }

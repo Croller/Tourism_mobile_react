@@ -11,30 +11,59 @@ import {
   Text,
   List,
   ListItem,
+  Footer
 } from 'native-base';
 import { LogoV } from '../../assets/img';
 
+import * as pack from '../../package.json';
+
 const routes = [
   {
-    route: 'Avia',
-    name: 'Авиабилеты',
+    id: 0,
+    route: 'Search',
+    name: 'Поиск',
     icon: 'plane'
   },
   {
-    route: 'Hotels',
-    name: 'Отели',
+    id: 1,
+    route: 'Map',
+    name: 'Карта',
+    icon: 'plane'
+  },
+  {
+    id: 2,
+    route: 'Blog',
+    name: 'Блог',
+    icon: 'plane'
+  },
+  {
+    id: 3,
+    route: 'Account',
+    name: 'Аккаунт',
+    icon: 'hotel'
+  },
+  {
+    id: 4,
+    route: 'About',
+    name: 'О приложении',
     icon: 'hotel'
   }
 ];
 
-class SideBar extends Component {
+class Drawer extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selected: 0,
+    };
   }
 
   render() {
+    const { selected } = this.state;
     const { navigation } = this.props;
+    console.log(selected);
+    console.log(navigation);
+    
     return (
       <Container>
         <Header style={styles.header}>
@@ -49,8 +78,9 @@ class SideBar extends Component {
               renderItem={({ item }) => (
                 <ListItem
                   button
-                  onPress={() => navigation.navigate(item.route)}
+                  onPress={() => { navigation.navigate(item.route); this.setState({ selected: item.id }); }}
                   style={styles.itemList}
+                  // style={[styles.itemList, { backgroundColor: (navigation.state.index === selected ? '#ffaf02' : '') }]}
                 >
                   <Text style={styles.itemListText}>
                     {item.name}
@@ -61,6 +91,13 @@ class SideBar extends Component {
             />
           </List>
         </Content>
+        <Footer style={styles.footer}>
+          <Text style={styles.footerText}>
+            ver
+            {' '}
+            {pack.version}
+          </Text>
+        </Footer>
       </Container>
     );
   }
@@ -86,16 +123,27 @@ const styles = StyleSheet.create({
   },
   itemList: {
     marginLeft: 0,
-    paddingLeft: 15,
+    paddingLeft: 0,
+  },
+  itemListActive: {
+    backgroundColor: '#ffaf02',
   },
   itemListText: {
     width: 220,
-    padding: 15,
+    padding: 5,
+    marginLeft: 15,
     fontFamily: 'Comfortaa-Regular'
   },
   textIcon: {
     width: 50
+  },
+  footer: {
+    paddingTop: 10,
+  },
+  footerText: {
+    fontSize: 12,
+    fontFamily: 'Comfortaa-Light'
   }
 });
 
-export default SideBar;
+export default Drawer;
