@@ -18,9 +18,9 @@ import {
   DatePicker
 } from 'native-base';
 
-class Hotels extends Component {
+class Excours extends Component {
   static navigationOptions = {
-    drawerLabel: 'Hotels',
+    drawerLabel: 'Excours',
   };
 
   constructor(props) {
@@ -38,9 +38,13 @@ class Hotels extends Component {
               <Icon name="md-globe" style={styles.icon} />
               <Input style={styles.input} value="Бали" />
             </Item>
+            <Item last style={styles.formItem}>
+              <Icon name="ios-man" style={styles.icon} />
+              <Input style={styles.input} value="2 участника" />
+            </Item>
           </Form>
-          <Form style={[styles.form, { marginTop: 10 }]}>
-            {/* <Item last style={styles.formItem}>
+          {/* <Form style={[styles.form, { marginTop: 10 }]}> */}
+          {/* <Item last style={styles.formItem}>
               <DatePicker
                 style={{ opacity: 0 }}
                 defaultDate={new Date(2018, 4, 4)}
@@ -58,19 +62,7 @@ class Hotels extends Component {
                 disabled={false}
               />
             </Item> */}
-            <Item last style={styles.formItem}>
-              <Icon name="md-browsers" style={styles.icon} />
-              <Input style={styles.input} value="21.08.2019" disabled />
-            </Item>
-            <Item last style={[styles.formItem, { marginTop: 2, }]}>
-              <Icon name="md-browsers" style={styles.icon} />
-              <Input style={styles.input} value="13.09.2019" disabled />
-            </Item>
-            <Item last style={styles.formItem}>
-              <Icon name="ios-man" style={styles.icon} />
-              <Input style={styles.input} value="2 гостя" />
-            </Item>
-          </Form>
+          {/* </Form> */}
           <Form style={[styles.form, { marginTop: 10 }]}>
             <Button full transparent style={styles.button}>
               <Text style={styles.buttonText}>Поиск</Text>
@@ -90,7 +82,7 @@ const styles = StyleSheet.create({
   },
   form: {
     borderRadius: 6,
-    backgroundColor: '#55b533',
+    backgroundColor: '#179cc7',
     padding: 10,
     paddingTop: 0,
   },
@@ -131,4 +123,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Hotels;
+export default Excours;

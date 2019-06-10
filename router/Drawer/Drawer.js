@@ -59,11 +59,11 @@ class Drawer extends Component {
   }
 
   render() {
-    const { selected } = this.state;
+    // const { selected } = this.state;
     const { navigation } = this.props;
-    console.log(selected);
-    console.log(navigation);
-    
+    // console.log(selected);
+    // console.log(navigation);
+
     return (
       <Container>
         <Header style={styles.header}>
